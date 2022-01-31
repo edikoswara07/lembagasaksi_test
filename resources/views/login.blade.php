@@ -21,7 +21,11 @@
     <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}">
 </head>
 
-<body class="hold-transition login-page">
+<body class="hold-transition dark-mode login-page">
+    <!-- Preloader -->
+    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+    </div>
     <div class="login-box">
         <div class="login-logo">
             <a href="/"><b>lembaga</b>Saksi</a>
@@ -63,13 +67,6 @@
                         <!-- /.col -->
                     </div>
                 </form>
-
-                <p class="mb-1 mt-3">
-                    <a href="forgot-password.html">I forgot my password</a>
-                </p>
-                <p class="mb-0">
-                    <a href="register.html" class="text-center">Register a new membership</a>
-                </p>
             </div>
             <!-- /.login-card-body -->
         </div>

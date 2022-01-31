@@ -17,6 +17,12 @@ Route::get('/', function () {
     return view('login');
 });
 
-Auth::routes();
+Auth::routes(
+    [
+        'register' => false,
+        'reset' => false,
+        'confirm' => false
+    ]
+);
 
 Route::get('/home', 'HomeController@index')->name('home');
