@@ -40,34 +40,59 @@
                     <a href="#" class="nav-link active">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
-                            Starter Pages
+                            Dashboard
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link active">
+                            <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Active Page</p>
+                                <p>Master Wilayah</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
-                                <p>Inactive Page</p>
+                                <p>Master DPT</p>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">
-                        <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Simple Link
-                            <span class="right badge badge-danger">New</span>
-                        </p>
-                    </a>
-                </li>
+                @role('superAdmin')
+                    <li class="nav-header">Menu Super Admin</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Administrasi
+                                <span class="right badge badge-danger">7</span>
+                            </p>
+                        </a>
+                    </li>
+                    @elserole('admin')
+                    <li class="nav-header">Menu Admin</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                DPT
+                                <span class="right badge badge-danger">7</span>
+                            </p>
+                        </a>
+                    </li>
+                @else
+                    <li class="nav-header">Menu User</li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fas fa-th"></i>
+                            <p>
+                                Saksi
+                                <span class="right badge badge-danger">7</span>
+                            </p>
+                        </a>
+                    </li>
+                @endrole
             </ul>
         </nav>
         <!-- /.sidebar-menu -->
